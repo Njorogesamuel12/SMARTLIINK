@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMARTLIINK | Online Jobs</title>
+<meta name="description" content="SMARTLIINK online job opportunities and registration in Kenya.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:linear-gradient(135deg,#075e54,#0b8f7f);color:#fff;padding:38px 18px;text-align:center}
+.logo{font-size:38px;font-weight:900;letter-spacing:1px}.tag{margin-top:8px;font-size:18px}
+.container{max-width:950px;margin:auto;padding:18px}
+.card{background:#fff;border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 5px 20px #00000012}
+.price{font-size:32px;font-weight:900;color:#075e54}.notice{background:#fff4d6;padding:15px;border-radius:10px}
+.btn{display:inline-block;background:#075e54;color:#fff;text-decoration:none;border:0;border-radius:10px;padding:13px 18px;font-weight:700;cursor:pointer}
+.whatsapp{background:#128c7e}.jobs{display:grid;gap:14px}
+.job{border:1px solid #e0e5eb;border-radius:12px;padding:18px}.job h3{margin:0 0 7px}
+.badge{display:inline-block;background:#e8f5f3;color:#075e54;padding:5px 9px;border-radius:20px;font-size:12px;margin:4px 4px 10px 0}
+input{width:100%;padding:13px;margin:7px 0 14px;border:1px solid #ccd3dc;border-radius:9px}
+button{width:100%;padding:14px;background:#075e54;color:white;border:0;border-radius:9px;font-size:16px;font-weight:700}
+.small{font-size:13px;color:#657080}footer{text-align:center;padding:25px;color:#657080}
+
+.admin-entry{border:2px solid #0b8f7f}
+.admin-panel{display:none;position:fixed;inset:0;background:#f4f7fb;z-index:9999;overflow:auto;padding:18px}
+.admin-wrap{max-width:1100px;margin:auto}
+.admin-top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;background:#075e54;color:#fff;padding:18px;border-radius:14px}
+.admin-top button,.danger{width:auto;background:#b42318}
+.admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:16px 0}
+.stat{background:#fff;padding:18px;border-radius:14px;box-shadow:0 5px 20px #00000012}
+.stat b{display:block;font-size:28px;color:#075e54;margin-top:6px}
+.admin-section{background:#fff;padding:18px;border-radius:14px;margin:16px 0;box-shadow:0 5px 20px #00000012}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:11px;border-bottom:1px solid #e5e7eb;text-align:left}
+th{background:#f0f6f5}
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap}
+.admin-actions button{width:auto;padding:9px 12px}
+.login-box{max-width:420px;margin:80px auto;background:#fff;padding:25px;border-radius:16px;box-shadow:0 5px 20px #0002}
+.badge-status{display:inline-block;padding:4px 8px;border-radius:20px;background:#e8f5f3;color:#075e54;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SMARTLIINK</div>
+<div class="tag">Online Job Opportunities 🇰🇪</div>
+<p>Find remote and flexible opportunities in one place.</p>
+</header>
+<div class="container">
+<div class="card admin-entry">
+  <h2>Admin Dashboard</h2>
+  <p class="small">For site administrator use. View registrations and manage listed jobs from this browser.</p>
+  <button type="button" onclick="openAdmin()">Open Admin Dashboard</button>
+</div>
+<div class="card">
+<h2>Start Your SMARTLIINK Journey</h2>
+<p>Register to access available online job opportunities.</p>
+<div class="price">KSh 100</div>
+<p class="small">Registration/service fee. Payment does not guarantee employment.</p>
+<div class="notice"><b>M-Pesa:</b> Send KSh 100 to <b>0115091244</b>, then enter your transaction code below.</div>
+<br><a class="btn whatsapp" href="https://wa.me/254115091244?text=Hello%20SMARTLIINK%2C%20I%20want%20to%20register%20for%20online%20jobs." target="_blank">💬 WhatsApp SMARTLIINK</a>
+</div>
+
+<div class="card">
+<h2>Available Jobs</h2>
+<div class="jobs">
+<div class="job"><h3>Data Entry Assistant</h3><span class="badge">Online</span><span class="badge">Flexible</span><p>Data entry and basic computer tasks.</p><a class="btn whatsapp" href="https://wa.me/254115091244?text=I%20want%20to%20apply%20for%20the%20Data%20Entry%20Assistant%20job." target="_blank">Apply on WhatsApp</a></div>
+<div class="job"><h3>Customer Support</h3><span class="badge">Remote</span><span class="badge">Part-time</span><p>Assist customers and respond to inquiries.</p><a class="btn whatsapp" href="https://wa.me/254115091244?text=I%20want%20to%20apply%20for%20the%20Customer%20Support%20job." target="_blank">Apply on WhatsApp</a></div>
+<div class="job"><h3>Social Media Assistant</h3><span class="badge">Online</span><span class="badge">Flexible</span><p>Help manage social media content and messages.</p><a class="btn whatsapp" href="https://wa.me/254115091244?text=I%20want%20to%20apply%20for%20the%20Social%20Media%20Assistant%20job." target="_blank">Apply on WhatsApp</a></div>
+</div>
+<p class="small">Only apply for jobs whose requirements and terms you understand.</p>
+</div>
+
+<div class="card">
+<h2>Create Your Account</h2>
+<form onsubmit="register(event)">
+<input id="name" placeholder="Full name" required>
+<input id="phone" placeholder="Phone number" required>
+<input id="email" type="email" placeholder="Email address" required>
+<input id="receipt" placeholder="M-Pesa transaction code" required>
+<button type="submit">Register</button>
+</form>
+<p id="message"></p>
+</div>
+
+<div class="card">
+<h2>Contact SMARTLIINK</h2>
+<p>📱 WhatsApp/Phone: <b>0115091244</b></p>
+<a class="btn whatsapp" href="https://wa.me/254115091244" target="_blank">Chat on WhatsApp</a>
+</div>
+</div>
+
+<div id="adminPanel" class="admin-panel">
+  <div class="admin-wrap">
+    <div id="adminLogin" class="login-box">
+      <h2>SMARTLIINK Admin Login</h2>
+      <p class="small">Demo dashboard protection. Change the password in the JavaScript before publishing.</p>
+      <input id="adminPassword" type="password" placeholder="Admin password">
+      <button onclick="adminLogin()">Login</button>
+      <p id="loginMsg" class="small"></p>
+    </div>
+
+    <div id="adminContent" style="display:none">
+      <div class="admin-top">
+        <div><h2 style="margin:0">SMARTLIINK Admin Dashboard</h2><div class="small" style="color:#d9fffa">Manage registrations and jobs</div></div>
+        <div class="admin-actions">
+          <button onclick="exportRegistrations()">Export CSV</button>
+          <button onclick="logoutAdmin()">Logout</button>
+          <button class="danger" onclick="clearRegistrations()">Clear Registrations</button>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <div class="stat">Registrations<b id="statRegs">0</b></div>
+        <div class="stat">Listed Jobs<b id="statJobs">0</b></div>
+        <div class="stat">Pending Review<b id="statPending">0</b></div>
+      </div>
+
+      <div class="admin-section">
+        <h3>Add a Job</h3>
+        <input id="jobTitle" placeholder="Job title">
+        <input id="jobType" placeholder="Type e.g. Remote / Part-time">
+        <input id="jobDescription" placeholder="Short job description">
+        <button onclick="addJob()">Add Job</button>
+      </div>
+
+      <div class="admin-section">
+        <h3>Job Listings</h3>
+        <div id="adminJobs"></div>
+      </div>
+
+      <div class="admin-section">
+        <h3>Registrations</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Email</th><th>M-Pesa Code</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody id="registrationRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 SMARTLIINK. All rights reserved.</footer>
+<script>
+const ADMIN_PASSWORD = "SMARTLIINK2026"; // CHANGE THIS before publishing.
+
+const defaultJobs = [
+  {id:1,title:"Data Entry Assistant",type:"Online • Flexible",description:"Data entry and basic computer tasks."},
+  {id:2,title:"Customer Support",type:"Remote • Part-time",description:"Assist customers and respond to inquiries."},
+  {id:3,title:"Social Media Assistant",type:"Online • Flexible",description:"Help manage social media content and messages."}
+];
+
+function getJobs(){ return JSON.parse(localStorage.getItem("smartliink_jobs") || "null") || defaultJobs; }
+function saveJobs(j){ localStorage.setItem("smartliink_jobs", JSON.stringify(j)); }
+function getRegs(){ return JSON.parse(localStorage.getItem("smartliink_regs") || "[]"); }
+function saveRegs(r){ localStorage.setItem("smartliink_regs", JSON.stringify(r)); }
+
+function register(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const email=document.getElementById('email').value.trim();
+  const receipt=document.getElementById('receipt').value.trim();
+
+  const regs=getRegs();
+  regs.push({id:Date.now(),date:new Date().toLocaleString(),name,phone,email,receipt,status:"Pending"});
+  saveRegs(regs);
+
+  const message = `SMARTLIINK REGISTRATION\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nM-Pesa Code: ${receipt}`;
+  const url = 'https://wa.me/254115091244?text=' + encodeURIComponent(message);
+  document.getElementById('message').innerHTML='<b>Registration saved!</b> Opening WhatsApp for verification.';
+  window.open(url,'_blank');
+  e.target.reset();
+}
+
+function openAdmin(){
+  document.getElementById("adminPanel").style.display="block";
+  document.getElementById("adminLogin").style.display="block";
+  document.getElementById("adminContent").style.display="none";
+  document.getElementById("adminPassword").value="";
+}
+function adminLogin(){
+  if(document.getElementById("adminPassword").value === ADMIN_PASSWORD){
+    document.getElementById("adminLogin").style.display="none";
+    document.getElementById("adminContent").style.display="block";
+    renderAdmin();
+  } else {
+    document.getElementById("loginMsg").textContent="Incorrect admin password.";
+  }
+}
+function logoutAdmin(){ document.getElementById("adminPanel").style.display="none"; }
+
+function renderAdmin(){
+  const jobs=getJobs(), regs=getRegs();
+  document.getElementById("statRegs").textContent=regs.length;
+  document.getElementById("statJobs").textContent=jobs.length;
+  document.getElementById("statPending").textContent=regs.filter(r=>r.status==="Pending").length;
+
+  document.getElementById("adminJobs").innerHTML=jobs.map(j =>
+    `<div class="job" style="margin-bottom:10px"><h3>${escapeHtml(j.title)}</h3>
+    <span class="badge-status">${escapeHtml(j.type)}</span>
+    <p>${escapeHtml(j.description)}</p>
+    <button style="width:auto;background:#b42318" onclick="deleteJob(${j.id})">Delete</button></div>`
+  ).join("");
+
+  document.getElementById("registrationRows").innerHTML=regs.length ? regs.map(r =>
+    `<tr><td>${escapeHtml(r.date)}</td><td>${escapeHtml(r.name)}</td><td>${escapeHtml(r.phone)}</td>
+    <td>${escapeHtml(r.email)}</td><td>${escapeHtml(r.receipt)}</td>
+    <td><span class="badge-status">${escapeHtml(r.status)}</span></td>
+    <td><button style="width:auto;padding:7px 10px" onclick="toggleStatus(${r.id})">Change</button></td></tr>`
+  ).join("") : '<tr><td colspan="7">No registrations yet.</td></tr>';
+}
+
+function addJob(){
+  const title=document.getElementById("jobTitle").value.trim();
+  const type=document.getElementById("jobType").value.trim() || "Online";
+  const description=document.getElementById("jobDescription").value.trim();
+  if(!title || !description){ alert("Enter a job title and description."); return; }
+  const jobs=getJobs();
+  jobs.push({id:Date.now(),title,type,description});
+  saveJobs(jobs);
+  document.getElementById("jobTitle").value="";
+  document.getElementById("jobType").value="";
+  document.getElementById("jobDescription").value="";
+  renderAdmin();
+}
+function deleteJob(id){
+  if(confirm("Delete this job?")){ saveJobs(getJobs().filter(j=>j.id!==id)); renderAdmin(); }
+}
+function toggleStatus(id){
+  const regs=getRegs(), r=regs.find(x=>x.id===id);
+  if(r) r.status = r.status==="Pending" ? "Verified" : "Pending";
+  saveRegs(regs); renderAdmin();
+}
+function clearRegistrations(){
+  if(confirm("Delete ALL saved registrations from this browser?")){
+    localStorage.removeItem("smartliink_regs"); renderAdmin();
+  }
+}
+function exportRegistrations(){
+  const regs=getRegs();
+  if(!regs.length){alert("No registrations to export.");return;}
+  const header=["Date","Name","Phone","Email","M-Pesa Code","Status"];
+  const rows=regs.map(r=>[r.date,r.name,r.phone,r.email,r.receipt,r.status]);
+  const csv=[header,...rows].map(row=>row.map(v=>`"${String(v).replaceAll('"','""')}"`).join(",")).join("\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="smartliink-registrations.csv"; a.click();
+  URL.revokeObjectURL(a.href);
+}
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
+</script>
+</body>
+</html>
